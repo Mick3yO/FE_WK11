@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* some basic style for the actual grid I'm using */
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 5px solid #000;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+        }
+        .cell i {
+            font-size: 7em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading to indicate the current player's turn -->
+    <h2 id="turnIndicator">It's X's turn</h2>
+
+    <!-- Actual grid for the game -->
+    <div id="game">
+        <div class="row">
+            <div class="col-1 cell border-bottom"></div>
+            <div class="col-1 cell border-bottom border-start border-end"></div>
+            <div class="col-1 cell border-bottom"></div>
+        </div>
+        <div class="row">
+            <div class="col-1 cell"></div>
+            <div class="col-1 cell border-start border-end"></div>
+            <div class="col-1 cell"></div>
+        </div>
+        <div class="row bottom">
+            <div class="col-1 cell border-top"></div>
+            <div class="col-1 cell border-top border-start border-end"></div>
+            <div class="col-1 cell border-top"></div>
+        </div>
+    </div>
+
+    <!-- Button to restart the game -->
+    <button id="resetButton" class="btn btn-primary mt-3">Restart Game</button>
+
+    <!-- Bootstrap alert for game result -->
+    <div id="gameResultAlert" class="alert mt-3" role="alert" style="display: none;"></div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- main JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
